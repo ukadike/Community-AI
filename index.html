@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Community AI — Small Systems Lab</title>
+<meta name="description" content="Community AI Node 0.1: locally governed intelligence designed from access needs outward.">
+<style>
+:root{--paper:#efece2;--ink:#1a1a1a;--line:#c9c5bb}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,serif;line-height:1.7}
+.wrap{max-width:64rem;margin:auto;padding:2rem}header{border-bottom:2px solid var(--ink);padding:2rem 0 1.5rem}
+h1,h2{font-family:Arial,Helvetica,sans-serif;line-height:1.2}h1{font-size:2.5rem}h2{margin-top:3rem}
+.meta{font-family:"Courier New",monospace;text-transform:uppercase;letter-spacing:.06em;font-size:.85rem}
+.callout{border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:1.5rem 0;margin:2rem 0;font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:1.35rem}
+.eq{background:#fff;border:1px solid var(--line);padding:1rem 1.25rem;font-family:"Courier New",monospace;overflow-x:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1rem}.card{background:#fff;border:1px solid var(--line);padding:1rem}
+a{color:inherit}.skip{position:absolute;left:-9999px}.skip:focus{left:1rem;top:1rem;background:#fff;padding:.5rem}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header><div class="wrap">
+<p class="meta">Small Systems Lab · Community AI</p>
+<h1>Community AI Node 0.1</h1>
+<p>A locally governed accessibility intelligence prototype.</p>
+</div></header>
+<main id="main" class="wrap">
+<div class="callout">Build from the street outward.</div>
+
+<p>Community AI begins with people, place, access needs, and governance—not with a model looking for somewhere to be deployed.</p>
+
+<div class="eq">person → street → community → need → system → infrastructure</div>
+
+<h2>Access state</h2>
+<div class="eq">A(t) = [m, p, r, s, c, l, e, g]</div>
+
+<div class="grid">
+<div class="card"><strong>m</strong><br>Mobility and path access</div>
+<div class="card"><strong>p</strong><br>Pace and timing access</div>
+<div class="card"><strong>r</strong><br>Reach and physical interaction</div>
+<div class="card"><strong>s</strong><br>Sensory and perceptual access</div>
+<div class="card"><strong>c</strong><br>Cognitive-load access</div>
+<div class="card"><strong>l</strong><br>Language and communication access</div>
+<div class="card"><strong>e</strong><br>Environmental access</div>
+<div class="card"><strong>g</strong><br>Agency, consent, and control</div>
+</div>
+
+<h2>Participation objective</h2>
+<div class="eq">x*(t) = arg max_x E[ Participation(x | A(t), E(t)) ]</div>
+
+<p>The prototype chooses the action most likely to increase meaningful participation under the current access and environmental conditions.</p>
+
+<h2>Governance gates</h2>
+<div class="eq">Access(x) ≥ τA<br>Privacy(x) ≥ τP<br>Agency(x) ≥ τG</div>
+
+<div class="callout">The optimization target is participation, not classification.</div>
+
+<h2>Node 0.1</h2>
+<p>The first version is software: a deterministic access-state model, participation scorer, and governance gate. A local open-weight language model can be added later as an interface—not as the source of the governance rules.</p>
+
+<p>This repository is currently in active prototype development.</p>
+</main>
+</body>
+</html>
