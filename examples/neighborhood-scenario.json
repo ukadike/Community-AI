@@ -1,0 +1,72 @@
+{
+  "name": "Neighborhood crossing timing",
+  "description": "A simple Community AI Node 0.1 scenario using declared access needs and public crossing conditions.",
+  "access_state": {
+    "mobility": 0.65,
+    "pace": 0.95,
+    "reach": 0.10,
+    "sensory": 0.25,
+    "cognitive": 0.20,
+    "language": 0.10,
+    "environment": 0.75,
+    "agency": 0.80
+  },
+  "environment": {
+    "crossing_seconds": 19,
+    "weather": "rain",
+    "curb_condition": "uneven",
+    "route_status": "open"
+  },
+  "sources": [
+    {
+      "type": "community_report",
+      "provenance": "Aggregated neighborhood accessibility feedback",
+      "retention": "aggregate-only"
+    },
+    {
+      "type": "public_dataset",
+      "provenance": "Published crossing timing and infrastructure data",
+      "retention": "public"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "standard-route",
+      "label": "Keep current route and timing",
+      "supports": {
+        "mobility": 0.35,
+        "pace": 0.25,
+        "reach": 0.70,
+        "sensory": 0.70,
+        "cognitive": 0.70,
+        "language": 0.70,
+        "environment": 0.30,
+        "agency": 0.80
+      },
+      "governance": {
+        "access": 0.45,
+        "privacy": 1.0,
+        "agency": 0.90
+      }
+    },
+    {
+      "id": "alternate-crossing",
+      "label": "Recommend nearby crossing with longer timing and smoother curb",
+      "supports": {
+        "mobility": 0.90,
+        "pace": 0.95,
+        "reach": 0.75,
+        "sensory": 0.80,
+        "cognitive": 0.80,
+        "language": 0.80,
+        "environment": 0.90,
+        "agency": 0.95
+      },
+      "governance": {
+        "access": 0.92,
+        "privacy": 1.0,
+        "agency": 0.95
+      }
+    }
+  ]
+}
