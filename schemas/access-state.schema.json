@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://smallsystemslab.org/community-ai/access-state.schema.json",
+  "title": "Community AI Access State",
+  "description": "Community-governed access requirements and environmental context for Community AI Node 0.1.",
+  "type": "object",
+  "required": ["timestamp", "access_state", "sources"],
+  "properties": {
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "access_state": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mobility", "pace", "reach", "sensory", "cognitive", "language", "environment", "agency"],
+      "properties": {
+        "mobility": {"type": "number", "minimum": 0, "maximum": 1},
+        "pace": {"type": "number", "minimum": 0, "maximum": 1},
+        "reach": {"type": "number", "minimum": 0, "maximum": 1},
+        "sensory": {"type": "number", "minimum": 0, "maximum": 1},
+        "cognitive": {"type": "number", "minimum": 0, "maximum": 1},
+        "language": {"type": "number", "minimum": 0, "maximum": 1},
+        "environment": {"type": "number", "minimum": 0, "maximum": 1},
+        "agency": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    },
+    "environment": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["type", "provenance"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["declared_need", "community_report", "public_dataset", "environmental_sensor", "service_status"]
+          },
+          "provenance": {"type": "string"},
+          "retention": {"type": "string"}
+        }
+      }
+    },
+    "uncertainty": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    }
+  }
+}
