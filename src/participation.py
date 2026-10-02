@@ -7,7 +7,7 @@ conditions.
 
 from typing import Dict, Iterable, List
 
-from governance import GovernanceThresholds, evaluate_gates
+from .governance import GovernanceThresholds, evaluate_gates
 
 
 ACCESS_DIMENSIONS = (
